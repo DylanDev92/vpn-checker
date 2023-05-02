@@ -4,7 +4,9 @@ const path = require("path");
 const { IP2Proxy } = require("ip2proxy-nodejs");
 require("dotenv").config();
 
-app.listen(process.env.PORT, () => {
+console.log("Trying to connect to... " + process.env.PORT);
+
+app.listen(process.env.PORT || 9001, () => {
   console.log(`Listening on port ${process.env.PORT}`);
 });
 
