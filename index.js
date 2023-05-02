@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     let ip2proxy = new IP2Proxy();
   if (
     ip2proxy.open(
-      "./IP2PROXY-IP-PROXYTYPE-COUNTRY-REGION-CITY-ISP-DOMAIN-USAGETYPE-ASN-LASTSEEN-THREAT-RESIDENTIAL-PROVIDER.BIN"
+      "./proxies.bin"
     ) == 0
   ) {
     isOrNotAFuckingVPNHuhYesOrNoAAAAA = false;
