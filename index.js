@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const { IP2Proxy } = require("ip2proxy-nodejs");
 require("dotenv").config();
 
@@ -9,9 +10,10 @@ app.listen(process.env.PORT, () => {
 
 app.get("/", (req, res) => {
     let ip2proxy = new IP2Proxy();
+    const jsonDirectory = path.join(process.cwd(), 'proxies.bin');
   if (
     ip2proxy.open(
-      "./proxies.bin"
+      jsonDirectory
     ) == 0
   ) {
     isOrNotAFuckingVPNHuhYesOrNoAAAAA = false;
